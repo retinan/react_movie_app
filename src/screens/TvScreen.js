@@ -2,23 +2,24 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Container, Row} from "react-bootstrap";
 import Poster from "../components/Poster";
+import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
 
 
-const MovieScreen = () => {
+const TvScreen = () => {
 
-    const [movies, setMovies] = useState([])
+    const [tvs, setTvs] = useState([])
 
     // ajax 통신 방법
     // fetch && axios
-    const getMovies = async () => {
+    const getTvs = async () => {
         try {
             // network
-            const url = "https://api.themoviedb.org/3/movie/now_playing?api_key=7f6a4f904182d1f7e0944a8537389b2d&language=en-US&page=1"
+            const url = "https://api.themoviedb.org/3/tv/popular?api_key=7f6a4f904182d1f7e0944a8537389b2d&language=en-US&page=1"
             const { data, status } = await axios.get(url)
 
             if (status === 200 ) {
                 console.log(data.results)
-                setMovies(data.results)
+                setTvs(data.results)
             }
 
 
@@ -28,20 +29,20 @@ const MovieScreen = () => {
     }
 
     useEffect(()=>{
-        getMovies()
+        getTvs()
     },[])
 
     return (
-        <Container>
-            {movies && movies.length}
+        <Container>tvs
+            {tvs && tvs.length}
             <Row>
-                {movies && movies.map(movie => (
+                {tvs && tvs.map(tv => (
                     // <>
                     //     <h3>{movie.title}</h3>
                     //     <p>{movie.overview}</p>
                     //     <hr/>
                     // </>
-                    <Poster path='movie' movie={movie} />
+                    <Poster path='tv' movie={tv} />
 
                 ))}
             </Row>
@@ -49,4 +50,4 @@ const MovieScreen = () => {
     );
 };
 
-export default MovieScreen;
+export default TvScreen;

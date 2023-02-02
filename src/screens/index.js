@@ -1,4 +1,6 @@
 import MovieScreen from "./MovieScreen";
-import TvScreen from "./Tv Screen";
+import MovieScreenDetail from "./MovieScreenDetail";
+import TvScreen from "./TvScreen";
+import TvScreenDetail from "./TvScreenDetail";
 
-export {MovieScreen, TvScreen}
+export {MovieScreen, MovieScreenDetail, TvScreen, TvScreenDetail}
