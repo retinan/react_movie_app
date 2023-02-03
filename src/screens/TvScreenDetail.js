@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Container, Row, Table, Image} from "react-bootstrap";
 import { useParams} from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 
 
@@ -37,6 +38,10 @@ const TvScreenDetail = () => {
     },[])
 
     return (
+        <>
+        <Helmet>
+            <title>{tv.title}</title>
+        </Helmet>
         <Container>
             <Row className='p-5'>
                 <div>
@@ -67,6 +72,7 @@ const TvScreenDetail = () => {
                 </Table>
             </Row>
         </Container>
+        </>
     );
 };
 

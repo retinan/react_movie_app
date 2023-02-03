@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Container, Row} from "react-bootstrap";
 import Poster from "../components/Poster";
-import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
+import { Helmet } from 'react-helmet';
 
 
 const TvScreen = () => {
@@ -33,6 +33,10 @@ const TvScreen = () => {
     },[])
 
     return (
+        <>
+        <Helmet>
+            <title>Tv List</title>
+        </Helmet>
         <Container>tvs
             {tvs && tvs.length}
             <Row>
@@ -47,6 +51,8 @@ const TvScreen = () => {
                 ))}
             </Row>
         </Container>
+        </>
+        
     );
 };
 
