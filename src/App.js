@@ -1,19 +1,25 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
 import {
     RouterProvider,
 } from "react-router-dom";
 import router from "./router";
-import Navi from './components/Navi'
 import Footer from './components/Footer';
+import { Col, Container, Row } from 'react-bootstrap';
+import Navi from './components/Navi';
 
 
 const App = () => {
     return (
         <>  
-            <Navi />
-            <RouterProvider router={router}/>
-            <Footer/>
+            <Row>
+                <Col xs={2} id="sidebar-wrapper">      
+                    <Navi />
+                </Col>
+                <Col  xs={10} id="page-content-wrapper">
+                    <RouterProvider router={router}/>
+                    <Footer/>
+                </Col> 
+            </Row>
         </>
 
     );

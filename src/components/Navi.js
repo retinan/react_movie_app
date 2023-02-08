@@ -1,21 +1,28 @@
 import React from 'react'
 import {Navbar, Nav, Container} from 'react-bootstrap'
 
+import '../styles/navi.css'
+
 const Navi = () => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+    <div className='sidebar'>
+      <Navbar className='d-none d-md-block'>
+        <div className="sidebar-sticky"></div>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Nav className='flex-column'>
+          <Nav.Item>
             <Nav.Link href="/">Movie</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
             <Nav.Link href="/tv">Tv</Nav.Link>
+            </Nav.Item>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      </Navbar>
+    </div>
+    
   )
 }
+
+
 
 export default Navi
