@@ -12,10 +12,10 @@ const App = () => {
     return (
         <>  
             <Row>
-                <Col xs={2} id="sidebar-wrapper">      
+                <Col xs={3} id="sidebar-wrapper">      
                     <Navi />
                 </Col>
-                <Col xs={10} id="page-content-wrapper" className='mt-5 mb-5'>
+                <Col xs={9} id="page-content-wrapper" className='mt-5 mb-5'>
                     <RouterProvider router={router}/>
                     <Footer/>
                 </Col> 

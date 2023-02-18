@@ -68,10 +68,15 @@ const SignUp = () => {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
+            <div className='d-flex'>
+                <Button variant="primary" type="submit" className='w-100'>
+                    Submit
+                </Button>
+            </div>
+            <div className='text-center mt-3 mb-3'>
             <Link to='/login' className='pl-5'>Login</Link>
+            </div>
+            
             </Form>
         </Container>
         

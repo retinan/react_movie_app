@@ -54,10 +54,14 @@ const LogIn = () => {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
-            <Link to='/signup' className='pl-5'>Signup</Link>
+            <div className='d-flex'>
+                <Button variant="primary" type="submit" className='w-100'>
+                    Submit
+                </Button>
+            </div>
+            <div className='text-center mt-3 mb-3'>
+            <Link to='/signup' className='pl-5'>SignUp</Link>
+            </div>
             </Form>
         </Container>
         

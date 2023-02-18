@@ -5,14 +5,18 @@ import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 // import MovieScreen from "./screens/MovieScreen";
 // import TvScreen from "./screens/Tv Screen";
-import {MovieScreen, MovieScreenDetail, TvScreen, TvScreenDetail} from './screens'
+import {Home, MovieScreen, MovieScreenDetail, TvScreen, TvScreenDetail} from './screens'
 
 const router = createBrowserRouter([
         {
             path:"/",
-            element:<MovieScreen/>
+            element:<Home/>
         },
         {
+            path:"/movie",
+            element:<MovieScreen/>
+        },
+    {
             path:"/movie/:id",
             element:<MovieScreenDetail/>
         },
